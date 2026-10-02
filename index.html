@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>光山ありさミュラー｜ピアニスト</title>
-<meta name="description" content="デュッセルドルフ在住ピアニスト・光山ありさミュラー。国際コンクール20冠以上。ケルン音楽大学コンツェルトエグザメン最高評価修了。">
+<title>光山ミュラーありさ｜ピアニスト</title>
+<meta name="description" content="デュッセルドルフ在住ピアニスト・光山ミュラーありさ。国際コンクール20冠以上。ケルン音楽大学コンツェルトエグザメン最高評価修了。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -242,6 +242,12 @@ section { padding: 120px 0; scroll-margin-top: 80px; }
   line-height: 2; color: var(--ink-mid); margin-bottom: 24px;
 }
 .profile-body p:last-child { margin-bottom: 0; }
+.profile-sub {
+  font-family: var(--ff-sans); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 20px;
+}
+.profile-body p + .profile-sub { margin-top: 48px; }
 
 
 /* -- LEBENSLAUF -- */
@@ -322,12 +328,14 @@ section { padding: 120px 0; scroll-margin-top: 80px; }
   transition: background var(--ease);
 }
 .disco-buy-btn:hover { background: var(--gold); }
+.disco-stream-btn { background: transparent; color: var(--ink); border: 1px solid var(--ink); margin-left: 8px; padding: 15px 28px; }
+.disco-stream-btn:hover { background: var(--ink); color: var(--white); }
 
 /* ── LESSONS ── */
 #lessons { background: var(--ink); }
 #lessons .section-label { color: var(--gold-light); }
 #lessons .section-title { color: var(--white); font-family: var(--ff-ja); }
-.lessons-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06); }
+.lessons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06); }
 .lesson-card { background: var(--ink); padding: 44px 32px; transition: background var(--ease); }
 .lesson-card:hover { background: #191916; }
 .lesson-card h3 {
@@ -499,15 +507,15 @@ footer {
 <!-- Nav -->
 <nav id="main-nav">
   <a href="#home" class="nav-logo"
-     data-ja="光山ありさミュラー"
+     data-ja="光山ミュラーありさ"
      data-de="Alica Koyama Müller"
-     data-en="Alica Koyama Müller">ありさミュラー</a>
+     data-en="Alica Koyama Müller">ミュラーありさ</a>
   <ul class="nav-links">
-    <li><a href="#profile"     data-ja="プロフィール"    data-de="Biographie"     data-en="Profile">プロフィール</a></li>
+    <li><a href="#profile"     data-ja="プロフィール"    data-de="Über mich"     data-en="Profile">プロフィール</a></li>
     <li><a href="#lebenslauf"  data-ja="経歴"             data-de="Lebenslauf"     data-en="Career">経歴</a></li>
     <li><a href="#awards"      data-ja="受賞歴"           data-de="Auszeichnungen" data-en="Awards">受賞歴</a></li>
     <li><a href="#discography" data-ja="ディスコグラフィ" data-de="Diskographie"   data-en="Discography">ディスコグラフィ</a></li>
-    <li><a href="#lessons"     data-ja="レッスン"         data-de="Unterricht"     data-en="Lessons">レッスン</a></li>
+    <li><a href="#lessons"     data-ja="レッスン"         data-de="Pädagogische Arbeit" data-en="Lessons">レッスン</a></li>
     <li><a href="#contact"     data-ja="お問い合わせ"     data-de="Kontakt"        data-en="Contact">お問い合わせ</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -515,41 +523,35 @@ footer {
 
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#profile"     onclick="closeMobileMenu()" data-ja="プロフィール"    data-de="Biographie"     data-en="Profile">プロフィール</a>
+  <a href="#profile"     onclick="closeMobileMenu()" data-ja="プロフィール"    data-de="Über mich"     data-en="Profile">プロフィール</a>
   <a href="#lebenslauf"  onclick="closeMobileMenu()" data-ja="経歴"             data-de="Lebenslauf"     data-en="Career">経歴</a>
   <a href="#awards"      onclick="closeMobileMenu()" data-ja="受賞歴"           data-de="Auszeichnungen" data-en="Awards">受賞歴</a>
   <a href="#discography" onclick="closeMobileMenu()" data-ja="ディスコグラフィ" data-de="Diskographie"   data-en="Discography">ディスコグラフィ</a>
-  <a href="#lessons"     onclick="closeMobileMenu()" data-ja="レッスン"         data-de="Unterricht"     data-en="Lessons">レッスン</a>
+  <a href="#lessons"     onclick="closeMobileMenu()" data-ja="レッスン"         data-de="Pädagogische Arbeit" data-en="Lessons">レッスン</a>
   <a href="#contact"     onclick="closeMobileMenu()" data-ja="お問い合わせ"     data-de="Kontakt"        data-en="Contact">お問い合わせ</a>
 </div>
 
 <!-- Hero -->
 <section class="hero" id="home">
   <div class="hero-img-col">
-    <img src="images/photo-03.jpg" alt="光山ありさミュラー">
+    <img src="images/photo-03.jpg" alt="光山ミュラーありさ">
   </div>
   <div class="hero-text-col">
     <p class="hero-eyebrow"
-       data-ja="ドイツ出身 · ピアニスト"
-       data-de="Pianistin · aus Deutschland"
-       data-en="Pianist · from Germany">
-      ドイツ出身 · ピアニスト
+       data-ja="日独ピアニスト"
+       data-de="deutsch-japanische Pianistin"
+       data-en="German-Japanese Pianist">
+      日独ピアニスト
     </p>
     <h1 class="hero-name"
-        data-ja="光山ありさミュラー"
+        data-ja="光山ミュラーありさ"
         data-de="Alica Koyama Müller"
-        data-en="Alica Koyama Müller">ありさミュラー</h1>
+        data-en="Alica Koyama Müller">ミュラーありさ</h1>
     <p class="hero-name-latin"
        data-ja="Alica Koyama Müller"
-       data-de="光山ありさミュラー"
-       data-en="光山ありさミュラー">Alica Koyama Mueller</p>
+       data-de="光山ミュラーありさ"
+       data-en="光山ミュラーありさ">Alica Koyama Mueller</p>
     <div class="hero-rule"></div>
-    <p class="hero-tagline"
-       data-ja="欧州の正統派ピアノ教育と日本の音楽文化を繋ぐ<br>トライリンガルの演奏家"
-       data-de="Europäische Musiktradition und japanische Musikkultur verbinden<br>Trilinguale Pianistin"
-       data-en="Bridging European classical tradition and Japanese musical culture<br>A trilingual performer">
-      欧州の正統派ピアノ教育と日本の音楽文化を繋ぐ<br>トライリンガルの演奏家
-    </p>
     <div class="hero-credentials">
       <div class="credential">
         <div class="credential-mark"></div>
@@ -562,14 +564,14 @@ footer {
         <div class="credential-mark"></div>
         <div class="credential-text">
           <strong data-ja="国際コンクール 20冠以上" data-de="Über 20 internationale Preise" data-en="20+ International Competition Prizes">国際コンクール 20冠以上</strong>
-          <span data-ja="セザール・フランク国際1位（ブリュッセル）· モーツァルト国際2位（ローマ）ほか" data-de="1. Preis César Franck Int'l (Brüssel) · 2. Preis Mozart Int'l (Rom) u.v.m." data-en="1st Prize César Franck Int'l (Brussels) · 2nd Prize Mozart Int'l (Rome) · more">セザール・フランク国際1位（ブリュッセル）· モーツァルト国際2位（ローマ）ほか</span>
+          <span data-ja="第3位 第32回 Concorso Pianoforte e Orchestra「Città di Cantù」· イタリア" data-de="3. Preis 32° Concorso Pianoforte e Orchestra „Città di Cantù“ · Italien" data-en="3rd Prize 32° Concorso Pianoforte e Orchestra “Città di Cantù” · Italy">第3位 第32回 Concorso Pianoforte e Orchestra「Città di Cantù」· イタリア</span>
         </div>
       </div>
       <div class="credential">
         <div class="credential-mark"></div>
         <div class="credential-text">
-          <strong data-ja="アンドレアス・フロリッヒ教授に師事" data-de="Studium bei Prof. Andreas Frölich" data-en="Studied under Prof. Andreas Frölich">アンドレアス・フロリッヒ教授に師事</strong>
-          <span data-ja="ケルン音楽大学 · パヴェル・ギリロフ系譜" data-de="HfMT Köln · Pavel Gililov-Linie" data-en="HfMT Cologne · Pavel Gililov lineage">ケルン音楽大学 · パヴェル・ギリロフ系譜</span>
+          <strong data-ja="アンドレアス・フロリッヒ教授に師事（学士・修士・コンツェルトエグザメン）" data-de="Bachelor/Master/Konzertexamen bei Prof. Andreas Frölich" data-en="Bachelor/Master/Konzertexamen with Prof. Andreas Frölich">アンドレアス・フロリッヒ教授に師事（学士・修士・コンツェルトエグザメン）</strong>
+          <span data-ja="ケルン音楽大学" data-de="HfMT Köln" data-en="HfMT Cologne">ケルン音楽大学</span>
         </div>
       </div>
     </div>
@@ -584,10 +586,10 @@ footer {
     </a>
 
     <div class="hero-jump-btns">
-      <a href="#profile"     class="jump-btn" data-ja="プロフィール"    data-de="Biographie"     data-en="Profile">プロフィール</a>
+      <a href="#profile"     class="jump-btn" data-ja="プロフィール"    data-de="Über mich"     data-en="Profile">プロフィール</a>
       <a href="#lebenslauf"  class="jump-btn" data-ja="経歴"           data-de="Lebenslauf"     data-en="Career">経歴</a>
       <a href="#awards"      class="jump-btn" data-ja="受賞歴"           data-de="Auszeichnungen" data-en="Awards">受賞歴</a>
-      <a href="#lessons"     class="jump-btn" data-ja="レッスン"         data-de="Unterricht"     data-en="Lessons">レッスン</a>
+      <a href="#lessons"     class="jump-btn" data-ja="レッスン"         data-de="Pädagogische Arbeit" data-en="Lessons">レッスン</a>
       <a href="#contact"     class="jump-btn" data-ja="お問い合わせ" data-de="Kontakt"   data-en="Contact">お問い合わせ</a>
     </div>
   </div>
@@ -597,39 +599,41 @@ footer {
 <section id="profile">
   <div class="container">
     <div class="reveal">
-      <p class="section-label" data-ja="プロフィール" data-de="Biographie" data-en="Profile">プロフィール</p>
-      <h2 class="section-title" data-ja="演奏家として" data-de="Als Pianistin" data-en="As a Pianist">演奏家として</h2>
+      <p class="section-label" data-ja="プロフィール" data-de="Über mich" data-en="About me">プロフィール</p>
+      <h2 class="section-title" data-ja="光山ミュラーありさ" data-de="Alica Koyama Müller" data-en="Alica Koyama Müller">光山ミュラーありさ</h2>
     </div>
     <div class="profile-grid reveal">
       <div class="profile-body">
-        <p data-ja="デュッセルドルフ在住のピアニスト。4歳よりピアノを始め、14歳でロベルト・シューマン音楽大学の早期入学プログラムに選ばれる。"
-           data-de="Die in Düsseldorf wohnhafte Pianistin begann im Alter von vier Jahren mit dem Klavierspiel und wurde mit 14 Jahren als Jungstudentin an der Robert Schumann Hochschule aufgenommen."
-           data-en="Düsseldorf-based pianist. Alica Koyama Müller began studying piano at the age of four and was admitted to the Robert Schumann University's young student programme at fourteen.">
-          デュッセルドルフ在住のピアニスト。4歳よりピアノを始め、14歳でロベルト・シューマン音楽大学の早期入学プログラムに選ばれる。
+        <h3 class="profile-sub" data-ja="ピアニストとして" data-de="Pianistisch" data-en="As a Pianist">ピアニストとして</h3>
+        <p data-ja="デュッセルドルフ生まれのピアニスト、光山ミュラーありさ。4歳で母 Ayako Koyama よりピアノを習い始め、14歳でロベルト・シューマン音楽大学の早期入学生となる。その1年後、ケルン音楽舞踊大学（HfMT Köln）にてアンドレアス・フロリッヒ教授のもとで学びを続け、学士・修士課程を最高評価で修了、2025年にコンツェルトエグザメンを最高評価で取得。"
+           data-de="Die in Düsseldorf geborene Pianistin Alica Koyama Müller erhielt mit vier Jahren ersten Klavierunterricht bei ihrer Mutter Ayako Koyama und wurde mit 14 Jahren Jungstudentin an der Robert Schumann Hochschule. Ein Jahr später führte sie ihr Studium bei Prof. Andreas Frölich an der Hochschule für Musik und Tanz Köln – Aachen fort, schloss Bachelor und Master mit Bestnote ab und legte 2025 ihr Konzertexamen mit höchster Auszeichnung ab."
+           data-en="Born in Düsseldorf, pianist Alica Koyama Müller received her first piano lessons at the age of four from her mother, Ayako Koyama, and became a young student at the Robert Schumann Hochschule at fourteen. A year later she continued her studies with Prof. Andreas Frölich at the Hochschule für Musik und Tanz Köln – Aachen, completed her Bachelor and Master with top marks, and passed her Konzertexamen with highest distinction in 2025.">
+          デュッセルドルフ生まれのピアニスト、光山ミュラーありさ。4歳で母 Ayako Koyama よりピアノを習い始め、14歳でロベルト・シューマン音楽大学の早期入学生となる。その1年後、ケルン音楽舞踊大学（HfMT Köln）にてアンドレアス・フロリッヒ教授のもとで学びを続け、学士・修士課程を最高評価で修了、2025年にコンツェルトエグザメンを最高評価で取得。
         </p>
-        <p data-ja="2010年よりケルン音楽大学（Hochschule für Musik und Theater Köln / HfMT Köln）にてアンドレアス・フロリッヒ教授に師事。学士・修士課程をともに最高評価で修了し、2025年3月、演奏家最高位の資格であるコンツェルトエグザメンを最高評価で取得。"
-           data-de="Seit 2010 studiert sie bei Professor Andreas Frölich an der Hochschule für Musik und Theater Köln (HfMT Köln), wo sie Bachelor und Master mit Bestnote abschloss. Im März 2025 erlangte sie das Konzertexamen mit der höchsten Auszeichnung."
-           data-en="Since 2010, she has studied under Professor Andreas Frölich at the Hochschule für Musik und Theater Köln (HfMT Cologne), completing both Bachelor and Master with distinction. In March 2025 she was awarded the Konzertexamen with the highest mark.">
-          2010年よりケルン音楽大学（HfMT Köln）にてアンドレアス・フロリッヒ教授に師事。学士・修士課程をともに最高評価で修了し、2025年3月、演奏家最高位の資格であるコンツェルトエグザメンを最高評価で取得。
+        <p data-ja="「Jugend musiziert」全国大会で複数回入賞。ブリュッセル、カントゥ、モンカリエーリ、ペンネ、ラルナカ、グラナダ、スプリットなどの国際コンクールで第1位を獲得。ザルツブルク・モーツァルテウム国際夏期アカデミーではプライズトレーガーに選出され、ザルツブルク音楽祭にも出演。ケルン・フィルハーモニー、エッセン・フィルハーモニー、バルセロナのカサ・ミラ、ボン・ベートーヴェン音楽祭（複数回）などで演奏。ソリストとして、ケルン、アーヘン、サンレモのオーケストラと共演している。"
+           data-de="Alica ist mehrfache Bundespreisträgerin bei „Jugend musiziert“ und gewann erste Preise bei internationalen Wettbewerben, unter anderem in Brüssel, Cantù, Moncalieri, Penne, Larnaca, Granada, Split u.v.m. Bei der Internationalen Sommerakademie des Mozarteums wurde sie als Preisträgerin ausgewählt und wirkte bei den Salzburger Festspielen mit. Konzerte führten sie u. a. in die Kölner und die Essener Philharmonie, in die Casa Milà in Barcelona und mehrfach zum Beethovenfest Bonn. Als Solistin trat sie mit Orchestern in Köln, Aachen und San Remo auf."
+           data-en="Alica is a multiple national prize winner at “Jugend musiziert” and has won first prizes at international competitions in Brussels, Cantù, Moncalieri, Penne, Larnaca, Granada, Split and elsewhere. She was selected as a prize winner at the International Summer Academy of the Mozarteum and performed at the Salzburg Festival. Concerts have taken her to the Cologne and Essen Philharmonie, the Casa Milà in Barcelona and, several times, the Beethovenfest Bonn. As a soloist she has appeared with orchestras in Cologne, Aachen and San Remo.">
+          「Jugend musiziert」全国大会で複数回入賞。ブリュッセル、カントゥ、モンカリエーリ、ペンネ、ラルナカ、グラナダ、スプリットなどの国際コンクールで第1位を獲得。ザルツブルク・モーツァルテウム国際夏期アカデミーではプライズトレーガーに選出され、ザルツブルク音楽祭にも出演。ケルン・フィルハーモニー、エッセン・フィルハーモニー、バルセロナのカサ・ミラ、ボン・ベートーヴェン音楽祭（複数回）などで演奏。ソリストとして、ケルン、アーヘン、サンレモのオーケストラと共演している。
         </p>
-        <p data-ja="在学中はパヴェル・ギリロフ教授、海老明子教授、アンリ・シーグフリードソン教授、ジャック・ルヴィエ教授ほか、各国の著名教授によるマスタークラスで研鑽を積む。"
-           data-de="Meisterkurse bei Prof. Pavel Gililov, Prof. Akiko Ebi, Prof. Henri Sigfridsson und Prof. Jacques Rouvier u. v. m."
-           data-en="Masterclasses with Prof. Pavel Gililov, Prof. Akiko Ebi, Prof. Henri Sigfridsson, Prof. Jacques Rouvier, and others.">
-          在学中はパヴェル・ギリロフ教授、海老明子教授、アンリ・シーグフリードソン教授、ジャック・ルヴィエ教授ほか、各国の著名教授によるマスタークラスで研鑽を積む。
+        <p data-ja="室内楽にも力を注ぎ、Roger Morelló Ros とのデュオでCD「Schumann goes Tango」を録音。Seongyeong Bae とのピアノデュオとしても活動している。"
+           data-de="Einen Schwerpunkt bildet die Kammermusik: Mit dem Duo Morelló Ros &amp; Koyama Müller nahm sie die CD „Schumann goes Tango“ auf, außerdem musiziert sie im Klavierduo mit Seongyeong Bae."
+           data-en="Chamber music is a particular focus: with the duo Morelló Ros &amp; Koyama Müller she recorded the CD “Schumann goes Tango”, and she also performs in a piano duo with Seongyeong Bae.">
+          室内楽にも力を注ぎ、Roger Morelló Ros とのデュオでCD「Schumann goes Tango」を録音。Seongyeong Bae とのピアノデュオとしても活動している。
         </p>
-        <p data-ja="ドイツ・オランダ・スペイン・キプロス・アイルランド・イタリア各地の音楽祭および演奏会に出演。ケルン・フィルハーモニー、エッセン・フィルハーモニーなどの著名会場でも演奏している。"
-           data-de="Konzerte in Deutschland, den Niederlanden, Spanien, Zypern, Irland und Italien, u. a. in der Kölner Philharmonie und der Essener Philharmonie."
-           data-en="Performances across Germany, the Netherlands, Spain, Cyprus, Ireland, and Italy, including at the Cologne Philharmonie and the Essen Philharmonie.">
-          ドイツ・オランダ・スペイン・キプロス・アイルランド・イタリア各地の音楽祭および演奏会に出演。ケルン・フィルハーモニー、エッセン・フィルハーモニーなどの著名会場でも演奏している。
+        <p data-ja="International MozArte Festival &amp; Piano Competition Aachen のフェスティバル＆コンクール・コーディネーターを務め、2022年より室内楽シリーズ「AmadèO auf der Burg」の芸術監督。2025年には「Jugend musiziert」州審査員に招かれた。"
+           data-de="Alica ist Festival &amp; Competition Coordinator vom International MozArte Festival &amp; Piano Competition Aachen und ist seit 2022 künstlerische Leiterin der Kammermusikreihe „AmadèO auf der Burg“. 2025 wurde sie zur Landesjury bei „Jugend musiziert“ eingeladen."
+           data-en="Alica is Festival &amp; Competition Coordinator of the International MozArte Festival &amp; Piano Competition Aachen and has been artistic director of the chamber music series “AmadèO auf der Burg” since 2022. In 2025 she was invited to the state jury of “Jugend musiziert”.">
+          International MozArte Festival &amp; Piano Competition Aachen のフェスティバル＆コンクール・コーディネーターを務め、2022年より室内楽シリーズ「AmadèO auf der Burg」の芸術監督。2025年には「Jugend musiziert」州審査員に招かれた。
         </p>
-        <p data-ja="日本語・ドイツ語の完全バイリンガル。ピアノデュオ「Bae &amp; Koyama-Mueller」としても活動中。"
-           data-de="Vollständig bilingual (Japanisch/Deutsch). Aktiv auch als Klavierduo „Bae &amp; Koyama-Mueller" mit Soyeon Bae."
-           data-en="Fully bilingual in Japanese and German. Also active as piano duo 'Bae &amp; Koyama-Mueller'.">
-          日本語・ドイツ語の完全バイリンガル。ピアノデュオ「Bae &amp; Koyama-Mueller」としても活動中。
+        <h3 class="profile-sub" data-ja="教育活動" data-de="Pädagogisch" data-en="Teaching">教育活動</h3>
+        <p data-ja="2011年より、メーアブッシュの名門「Klavierstudio Koyama」にて、4歳以上のお子様から大人まで、アマチュアから上級者まで、ピアノ、テクニック、音楽理論全般を指導。生徒は Klavierstudio Koyama のコンサートに定期的に出演し、Steinway &amp; Sons Düsseldorf、デュッセルドルフ・ゲーテ博物館、KÖ-Galerie などで演奏している。「Jugend musiziert」でも生徒が最高点で第1位を獲得し、州大会に出場。最近では、生徒の一人が St. George’s International School より「Creative Arts Valedictorian Award」を受賞した。"
+           data-de="Alica unterrichtet seit 2011 Kinder ab vier Jahren und Erwachsene, Amateure und Fortgeschrittene im Klavier, Technik sowie allgemeine Musiktheorie im renommierten Klavierstudio Koyama in Meerbusch. Ihre Schüler treten regelmäßig bei Konzerten des Klavierstudios Koyama auf, wie z.B. im Steinway &amp; Sons Düsseldorf, im Goethe-Museum Düsseldorf, in der KÖ-Galerie in Düsseldorf u.v.m. Auch ihre Schüler waren bereits bei „Jugend musiziert“ erfolgreich und gewannen erste Preise mit der Höchstpunktzahl und traten beim Landeswettbewerb an. Letztlich wurde ihre Schülerin von der St. George’s International School mit dem „Creative Arts Valedictorian Award“ ausgezeichnet."
+           data-en="Since 2011 Alica has taught children from the age of four as well as adults, amateurs and advanced players in piano, technique and general music theory at the renowned Klavierstudio Koyama in Meerbusch. Her students perform regularly at Klavierstudio Koyama concerts, for example at Steinway &amp; Sons Düsseldorf, the Goethe-Museum Düsseldorf and the KÖ-Galerie in Düsseldorf. Her students have also been successful at “Jugend musiziert”, winning first prizes with maximum points and competing at the state competition. Most recently, one of her students received the “Creative Arts Valedictorian Award” from St. George’s International School.">
+          2011年より、メーアブッシュの名門「Klavierstudio Koyama」にて、4歳以上のお子様から大人まで、アマチュアから上級者まで、ピアノ、テクニック、音楽理論全般を指導。生徒は Klavierstudio Koyama のコンサートに定期的に出演し、Steinway &amp; Sons Düsseldorf、デュッセルドルフ・ゲーテ博物館、KÖ-Galerie などで演奏している。「Jugend musiziert」でも生徒が最高点で第1位を獲得し、州大会に出場。最近では、生徒の一人が St. George’s International School より「Creative Arts Valedictorian Award」を受賞した。
         </p>
       </div>
       <div class="profile-photos">
-        <img src="images/photo-01.jpg" alt="光山ありさミュラー">
+        <img src="images/photo-01.jpg" alt="光山ミュラーありさ">
       </div>
     </div>
   </div>
@@ -644,44 +648,44 @@ footer {
     </div>
     <div class="lauf-grid reveal">
       <div class="lauf-photo">
-        <img src="images/photo-02.jpg" alt="光山ありさミュラー" style="margin-bottom:16px;">
-        <img src="images/photo-05.jpg" alt="光山ありさミュラー" style="width:100%;height:auto;display:block;">
+        <img src="images/photo-02.jpg" alt="光山ミュラーありさ" style="margin-bottom:16px;">
+        <img src="images/photo-05.jpg" alt="光山ミュラーありさ" style="width:100%;height:auto;display:block;">
       </div>
       <div class="lauf-col">
         <p class="lauf-col-head" data-ja="学歴" data-de="Studium" data-en="Education">学歴</p>
         <div class="lauf-item">
-          <span class="lauf-year">2025</span>
+          <span class="lauf-year">2022&#x2013;25</span>
           <div class="lauf-text">
             <strong data-ja="コンツェルトエグザメン 最高評価" data-de="Konzertexamen mit Auszeichnung" data-en="Konzertexamen with Distinction">コンツェルトエグザメン 最高評価</strong>
-            <span data-ja="ケルン音楽大学（HfMT Köln）· Prof. Andreas Frölich" data-de="HfMT Köln · Prof. Andreas Frölich" data-en="HfMT Cologne · Prof. Andreas Frölich">ケルン音楽大学（HfMT Köln）· Prof. Andreas Frölich</span>
+            <span data-ja="ケルン音楽大学（HfMT Köln）· Prof. Andreas Frölich" data-de="Hochschule für Musik und Tanz Köln · Prof. Andreas Frölich" data-en="University of Music and Dance Cologne · Prof. Andreas Frölich">ケルン音楽大学（HfMT Köln）· Prof. Andreas Frölich</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2018&#x2013;21</span>
           <div class="lauf-text">
             <strong data-ja="修士課程 修了（評価1.0）" data-de="Masterstudium (Abschluss 1,0)" data-en="Master&#x27;s Degree (Grade 1.0)">修士課程 修了（評価1.0）</strong>
-            <span data-ja="ケルン音楽大学 · Prof. Andreas Frölich" data-de="HfMT Köln · Prof. Andreas Frölich" data-en="HfMT Cologne · Prof. Andreas Frölich">ケルン音楽大学 · Prof. Andreas Frölich</span>
+            <span data-ja="ケルン音楽大学 · Prof. Andreas Frölich" data-de="Hochschule für Musik und Tanz Köln · Prof. Andreas Frölich" data-en="University of Music and Dance Cologne · Prof. Andreas Frölich">ケルン音楽大学 · Prof. Andreas Frölich</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2014&#x2013;18</span>
           <div class="lauf-text">
             <strong data-ja="学士課程 修了（評価1.0）" data-de="Bachelorstudium (Abschluss 1,0)" data-en="Bachelor&#x27;s Degree (Grade 1.0)">学士課程 修了（評価1.0）</strong>
-            <span data-ja="ケルン音楽大学 · Prof. Andreas Frölich" data-de="HfMT Köln · Prof. Andreas Frölich" data-en="HfMT Cologne · Prof. Andreas Frölich">ケルン音楽大学 · Prof. Andreas Frölich</span>
+            <span data-ja="ケルン音楽大学 · Prof. Andreas Frölich" data-de="Hochschule für Musik und Tanz Köln · Prof. Andreas Frölich" data-en="University of Music and Dance Cologne · Prof. Andreas Frölich">ケルン音楽大学 · Prof. Andreas Frölich</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2010&#x2013;14</span>
           <div class="lauf-text">
             <strong data-ja="ジュングスタディウム" data-de="Jungstudium" data-en="Young Student Programme">ジュングスタディウム</strong>
-            <span data-ja="ケルン音楽大学 · Prof. Andreas Frölich" data-de="HfMT Köln · Prof. Andreas Frölich" data-en="HfMT Cologne · Prof. Andreas Frölich">ケルン音楽大学 · Prof. Andreas Frölich</span>
+            <span data-ja="ケルン音楽大学 · Prof. Andreas Frölich" data-de="Hochschule für Musik und Tanz Köln · Prof. Andreas Frölich" data-en="University of Music and Dance Cologne · Prof. Andreas Frölich">ケルン音楽大学 · Prof. Andreas Frölich</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2009&#x2013;10</span>
           <div class="lauf-text">
             <strong data-ja="ジュングスタディウム" data-de="Jungstudium" data-en="Young Student Programme">ジュングスタディウム</strong>
-            <span data-ja="ロベルト・シューマン音楽大学 デュッセルドルフ" data-de="Robert Schumann Hochschule Düsseldorf" data-en="Robert Schumann University Duesseldorf">ロベルト・シューマン音楽大学</span>
+            <span data-ja="ロベルト・シューマン音楽大学 デュッセルドルフ · Prof. Yumiko Maruyama" data-de="Robert Schumann Hochschule Düsseldorf · Prof. Yumiko Maruyama" data-en="Robert Schumann University Duesseldorf · Prof. Yumiko Maruyama">ロベルト・シューマン音楽大学 · Prof. Yumiko Maruyama</span>
           </div>
         </div>
 
@@ -689,29 +693,43 @@ footer {
         <div class="lauf-item">
           <span class="lauf-year">2024</span>
           <div class="lauf-text">
-            <strong>W.A. Mozart KV 415</strong>
+            <strong data-ja="W.A. Mozart ピアノ協奏曲 第13番 ハ長調 KV 415" data-de="W.A. Mozart Klavierkonzert Nr. 13 C-Dur, KV 415" data-en="W.A. Mozart Piano Concerto No. 13 in C major, K. 415">W.A. Mozart ピアノ協奏曲 第13番 ハ長調 KV 415</strong>
             <span data-ja="Philarmonic Orchestra Mihail Jora · イタリア" data-de="Philarmonic Orchestra Mihail Jora · Italien" data-en="Philarmonic Orchestra Mihail Jora · Italy">Philarmonic Orchestra Mihail Jora · イタリア</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2021</span>
           <div class="lauf-text">
-            <strong data-ja="L.v. Beethoven ピアノ協奏曲 第3番" data-de="L.v. Beethoven Klavierkonzert Nr. 3" data-en="L.v. Beethoven Piano Concerto No. 3">L.v. Beethoven ピアノ協奏曲 第3番</strong>
+            <strong data-ja="C. Saint-Saëns「動物の謝肉祭」" data-de="C. Saint-Saëns „Karneval der Tiere“" data-en="C. Saint-Saëns “Carnival of the Animals”">C. Saint-Saëns「動物の謝肉祭」</strong>
+            <span data-ja="HfMT Köln-Aachen 大学オーケストラ · 録音" data-de="Hochschulorchester der HfMT Köln-Aachen · Aufnahme" data-en="HfMT Köln-Aachen University Orchestra · Recording">HfMT Köln-Aachen 大学オーケストラ · 録音</span>
+          </div>
+        </div>
+        <div class="lauf-item">
+          <span class="lauf-year">2021</span>
+          <div class="lauf-text">
+            <strong data-ja="L.v. Beethoven ピアノ協奏曲 第3番 ハ短調 op. 37" data-de="L.v. Beethoven Klavierkonzert Nr. 3 c-Moll, op. 37" data-en="L.v. Beethoven Piano Concerto No. 3 in C minor, op. 37">L.v. Beethoven ピアノ協奏曲 第3番 ハ短調 op. 37</strong>
             <span data-ja="Brescia Master Orchestra · イタリア" data-de="Brescia Master Orchestra · Italien" data-en="Brescia Master Orchestra · Italy">Brescia Master Orchestra · イタリア</span>
+          </div>
+        </div>
+        <div class="lauf-item">
+          <span class="lauf-year">2019</span>
+          <div class="lauf-text">
+            <strong data-ja="W.A. Mozart ピアノ協奏曲 第27番 変ロ長調 KV 595" data-de="W.A. Mozart Klavierkonzert Nr. 27 B-Dur, KV 595" data-en="W.A. Mozart Piano Concerto No. 27 in B-flat major, K. 595">W.A. Mozart ピアノ協奏曲 第27番 変ロ長調 KV 595</strong>
+            <span data-ja="HfMT Köln 大学オーケストラ · ドイツ" data-de="Hochschulorchester der HfMT Köln · Deutschland" data-en="HfMT Köln University Orchestra · Germany">HfMT Köln 大学オーケストラ · ドイツ</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2018</span>
           <div class="lauf-text">
-            <strong data-ja="F. Mendelssohn ピアノ協奏曲 第1番" data-de="F. Mendelssohn Klavierkonzert Nr. 1" data-en="F. Mendelssohn Piano Concerto No. 1">F. Mendelssohn ピアノ協奏曲 第1番</strong>
+            <strong data-ja="F. Mendelssohn ピアノ協奏曲 第1番 ト短調 op. 25" data-de="F. Mendelssohn Klavierkonzert Nr. 1 g-Moll, op. 25" data-en="F. Mendelssohn Piano Concerto No. 1 in G minor, op. 25">F. Mendelssohn ピアノ協奏曲 第1番 ト短調 op. 25</strong>
             <span data-ja="Orchestra Sinfonica di San Remo · イタリア" data-de="Orchestra Sinfonica di San Remo · Italien" data-en="Orchestra Sinfonica di San Remo · Italy">Orchestra Sinfonica di San Remo · イタリア</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2015</span>
           <div class="lauf-text">
-            <strong>W.A. Mozart KV 415</strong>
-            <span data-ja="Orchestra di Moncalieri · イタリア（ヨーロピアン・ミュージックコンペティション）" data-de="Orchestra di Moncalieri · Italien (European Music Competition)" data-en="Orchestra di Moncalieri · Italy (European Music Competition)">Orchestra di Moncalieri · イタリア</span>
+            <strong data-ja="W.A. Mozart ピアノ協奏曲 第13番 ハ長調 KV 415" data-de="W.A. Mozart Klavierkonzert Nr. 13 C-Dur, KV 415" data-en="W.A. Mozart Piano Concerto No. 13 in C major, K. 415">W.A. Mozart ピアノ協奏曲 第13番 ハ長調 KV 415</strong>
+            <span data-ja="Orchestra di Moncalieri · イタリア" data-de="Orchestra di Moncalieri · Italien" data-en="Orchestra di Moncalieri · Italy">Orchestra di Moncalieri · イタリア</span>
           </div>
         </div>
       </div>
@@ -719,7 +737,7 @@ footer {
       <div class="lauf-col">
         <p class="lauf-col-head" data-ja="奨学金・助成" data-de="Stipendien &amp; Förderungen" data-en="Scholarships &amp; Grants">奨学金・助成</p>
         <div class="lauf-item">
-          <span class="lauf-year">2023&#x301c;</span>
+          <span class="lauf-year">2023&#x301c;2025</span>
           <div class="lauf-text"><strong>Werner Richard &#x2013; Dr. Carl Dörken Stiftung</strong></div>
         </div>
         <div class="lauf-item">
@@ -755,25 +773,25 @@ footer {
           </div>
         </div>
 
-        <p class="lauf-col-head mt" data-ja="音楽活動・メディア" data-de="Aktivitäten &amp; Medien" data-en="Activities &amp; Media">音楽活動・メディア</p>
+        <p class="lauf-col-head mt" data-ja="その他の活動" data-de="Weitere Aktivitäten" data-en="Further Activities">その他の活動</p>
         <div class="lauf-item">
           <span class="lauf-year">2022&#x301c;</span>
           <div class="lauf-text">
             <strong data-ja="芸術監督" data-de="Künstlerische Leiterin" data-en="Artistic Director">芸術監督</strong>
-            <span data-ja="「AmadèO auf der Burg」室内楽コンサートシリーズ（ヘルツォーゲンラート）" data-de="Kammermusikreihe AmadeO auf der Burg, Herzogenrath" data-en="Chamber Music Series AmadeO auf der Burg, Herzogenrath">「AmadèO auf der Burg」室内楽シリーズ</span>
+            <span data-ja="「AmadèO auf der Burg」室内楽コンサートシリーズ（ヘルツォーゲンラート）" data-de="Kammermusikreihe AmadèO auf der Burg, Herzogenrath" data-en="Chamber Music Series AmadèO auf der Burg, Herzogenrath">「AmadèO auf der Burg」室内楽シリーズ</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2021</span>
           <div class="lauf-text">
-            <strong data-ja="CD発売「Schumann goes Tango」" data-de="CD-Veröffentlichung Schumann goes Tango" data-en="CD Release Schumann goes Tango">CD発売「Schumann goes Tango」</strong>
+            <strong data-ja="デビューCD「Schumann goes Tango」" data-de="Debüt-CD „Schumann goes Tango“" data-en="Debut CD “Schumann goes Tango”">デビューCD「Schumann goes Tango」</strong>
             <span data-ja="Roger Morelló Ros（チェロ）との共演" data-de="mit Roger Morelló Ros (Violoncello)" data-en="with Roger Morelló Ros (cello)">Roger Morelló Ros（チェロ）との共演</span>
           </div>
         </div>
         <div class="lauf-item">
           <span class="lauf-year">2013&#x301c;</span>
           <div class="lauf-text">
-            <strong data-ja="組織委員" data-de="Organisation" data-en="Organisation">組織委員</strong>
+            <strong data-ja="フェスティバル＆コンクール・コーディネーター" data-de="Festival &amp; Competition Coordinator" data-en="Festival &amp; Competition Coordinator">フェスティバル＆コンクール・コーディネーター</strong>
             <span>International MozArte Piano Competition &amp; Festival Aachen</span>
           </div>
         </div>
@@ -781,7 +799,7 @@ footer {
           <span class="lauf-year" data-ja="メディア" data-de="Medien" data-en="Media">メディア</span>
           <div class="lauf-text">
             <strong data-ja="TV・ラジオ出演" data-de="TV &amp; Radio" data-en="TV &amp; Radio">TV・ラジオ出演</strong>
-            <span data-ja="WDR「Hier und Heute」20分間ドキュメンタリー · ORFラジオ収録" data-de="WDR Hier und Heute (20-Min.-Dokumentation) · ORF-Radioaufnahme" data-en="WDR Hier und Heute (20-min documentary) · ORF radio recording">WDR「Hier und Heute」 · ORF</span>
+            <span data-ja="– ZDF「Hier und Heute」<br>– ORF1「Apropos Musik」" data-de="– ZDF „Hier und Heute“<br>– ORF1 „Apropos Musik“" data-en="– ZDF “Hier und Heute”<br>– ORF1 “Apropos Musik”">– ZDF「Hier und Heute」<br>– ORF1「Apropos Musik」</span>
           </div>
         </div>
       </div>
@@ -797,6 +815,11 @@ footer {
       <h2 class="section-title" data-ja="国際コンクール入賞歴" data-de="Internationale Wettbewerbspreise" data-en="International Competition Prizes">国際コンクール入賞歴</h2>
     </div>
     <div class="awards-grid reveal">
+      <div class="award-item">
+        <div class="award-rank" data-ja="第3位" data-de="3. Preis" data-en="3rd Prize">第3位</div>
+        <div class="award-name" data-ja="32° Concorso Pianoforte e Orchestra «Città di Cantù»" data-de="32° Concorso Pianoforte e Orchestra „Città di Cantù“" data-en="32° Concorso Pianoforte e Orchestra “Città di Cantù”">32° Concorso Pianoforte e Orchestra «Città di Cantù»</div>
+        <div class="award-location" data-ja="イタリア" data-de="Italien" data-en="Italy">イタリア</div>
+      </div>
       <div class="award-item">
         <div class="award-rank" data-ja="第1位" data-de="1. Preis" data-en="1st Prize">第1位</div>
         <div class="award-name" data-ja="César Franck International Piano Competition" data-de="César Franck International Piano Competition" data-en="César Franck International Piano Competition">セザール・フランク国際ピアノコンクール</div>
@@ -850,7 +873,7 @@ footer {
 <div class="ig-banner">
   <div class="ig-banner-text">
     <h3 data-ja="Instagram で最新の活動を" data-de="Aktuelle Aktivitäten auf Instagram" data-en="Latest updates on Instagram">Instagram で最新の活動を</h3>
-    <p data-ja="コンサート情報・日々の練習・ケルンからの発信" data-de="Konzertinfos · Üben · Berichte aus Köln" data-en="Concert updates · practice · dispatches from Cologne">コンサート情報・日々の練習・ケルンからの発信</p>
+    <p data-ja="コンサート情報・日々の練習・アーティストの日常" data-de="Konzertinfos · Üben · Künstleralltag" data-en="Concert updates · practice · an artist’s everyday life">コンサート情報・日々の練習・アーティストの日常</p>
   </div>
   <a href="https://www.instagram.com/alicakoyamamueller?igsh=MXRlcG90bmprN3VraA%3D%3D&utm_source=qr"
      target="_blank" rel="noopener" class="ig-banner-btn">
@@ -872,7 +895,7 @@ footer {
       </div>
       <div class="disco-detail">
         <h3 data-ja="Schumann goes Tango" data-de="Schumann goes Tango" data-en="Schumann goes Tango">Schumann goes Tango</h3>
-        <p class="disco-sub" data-ja="光山ありさミュラー（ピアノ）· Roger Morelló Ros（チェロ）" data-de="Alica Koyama Müller (Klavier) · Roger Morelló Ros (Cello)" data-en="Alica Koyama Müller (piano) · Roger Morelló Ros (cello)">ありさミュラー（ピアノ）· Roger Morelló Ros（チェロ）</p>
+        <p class="disco-sub" data-ja="光山ミュラーありさ（ピアノ）· Roger Morelló Ros（チェロ）" data-de="Alica Koyama Müller (Klavier) · Roger Morelló Ros (Cello)" data-en="Alica Koyama Müller (piano) · Roger Morelló Ros (cello)">ミュラーありさ（ピアノ）· Roger Morelló Ros（チェロ）</p>
         <p data-ja="シューマンのロマン性とアルゼンチン・タンゴの情熱が融合した意欲的なデビューアルバム。デュッセルドルフを拠点に活動する2人が生み出す独自の音楽世界。"
            data-de="Ein ambitioniertes Debütalbum, das Schumanns Romantik mit der Leidenschaft des argentinischen Tango verbindet."
            data-en="An ambitious debut album fusing Schumann's romanticism with the passion of Argentine tango.">
@@ -884,10 +907,12 @@ footer {
            data-ja="購入する →" data-de="Kaufen →" data-en="Buy →">
           購入する →
         </a>
+        <a class="disco-buy-btn disco-stream-btn" href="https://open.spotify.com/search/Schumann%20goes%20Tango" target="_blank" rel="noopener">Spotify</a>
+        <a class="disco-buy-btn disco-stream-btn" href="https://music.apple.com/us/artist/alica-koyama-m%C3%BCller/1622383708" target="_blank" rel="noopener">Apple Music</a>
       </div>
 
     <div class="reveal" style="margin-top:60px;">
-      <p class="section-label" data-ja="映像" data-de="Video" data-en="Video">Video</p>
+      <p class="section-label"><span data-ja="映像" data-de="Video" data-en="Video">Video</span> &nbsp;<a href="https://www.youtube.com/@alicamuller4004" target="_blank" rel="noopener" style="color:inherit;">· YouTube ↗</a></p>
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;background:var(--beige-mid);">
         <iframe
           src="https://www.youtube.com/embed/t3oya2L7pYc"
@@ -904,19 +929,15 @@ footer {
   <div class="container">
     <div class="reveal">
       <p class="section-label" data-ja="レッスン・マスタークラス" data-de="Unterricht &amp; Meisterkurse" data-en="Lessons &amp; Masterclasses">レッスン・マスタークラス</p>
-             <h2 class="section-title" data-ja="論理と響き。<br>ドイツ・ピアニズムの真髄。" data-de="Logik und Klang.<br>Die Essenz des deutschen Pianismus." data-en="Logic and Sound.<br>The Essence of German Pianism.">論理と響き。<br>ドイツ・ピアニズムの真髄。</h2>
+             <h2 class="section-title" data-ja="学術的でありながら自由に。<br>ドイツ・ピアニズムの真髄。" data-de="Akademisch aber frei.<br>Die Essenz des deutschen Pianismus." data-en="Academic, yet free.<br>The Essence of German Pianism.">学術的でありながら自由に。<br>ドイツ・ピアニズムの真髄。</h2>
     <div class="lessons-grid reveal">
       <div class="lesson-card">
         <h3 data-ja="オンライン個人レッスン" data-de="Online-Einzelunterricht" data-en="Online Individual Lessons">オンライン個人レッスン</h3>
-        <p data-ja="ケルン音楽大学アンドレアス・フロリッヒ教授クラスで培った欧州正統派の指導を、日本語で直接お届けします。本物の音楽を追求するハイレベルな方への、厳選された個人指導。"
-           data-de="Klavierunterricht auf höchstem Niveau in der Tradition von Prof. Andreas Frölich (HfMT Köln). Für fortgeschrittene Pianisten, die künstlerische Tiefe und technische Exzellenz anstreben."
-           data-en="Piano instruction rooted in the tradition of Prof. Andreas Frölich (HfMT Cologne). For advanced pianists seeking artistic depth and technical excellence.">
-          ケルン音楽大学アンドレアス・フロリッヒ教授クラスで培った欧州正統派の指導を、日本語で直接お届けします。本物の音楽を追求するハイレベルな方への、厳選された個人指導。
+        <p data-ja="最高水準のピアノレッスンを、日本語で直接お届けします。芸術的な深みと高度な技術を追求する上級者の方へ。"
+           data-de="Klavierunterricht auf höchstem Niveau. Für fortgeschrittene Pianisten, die künstlerische Tiefe und technische Exzellenz anstreben."
+           data-en="Piano instruction at the highest level. For advanced pianists seeking artistic depth and technical excellence.">
+          最高水準のピアノレッスンを、日本語で直接お届けします。芸術的な深みと高度な技術を追求する上級者の方へ。
         </p>
-        <div class="lesson-detail">
-          <span class="lesson-detail-label" data-ja="対象" data-de="Ziel" data-en="For">対象</span>
-          <span class="lesson-detail-val" data-ja="上級 · 音大生 · 本格的な演奏を目指す方" data-de="Fortgeschrittene · Musikstudierende · Berufsmusiker" data-en="Advanced · Music students · Aspiring professionals">上級 · 音大生 · 本格的な演奏を目指す方</span>
-        </div>
         <div class="lesson-detail">
           <span class="lesson-detail-label" data-ja="言語" data-de="Sprache" data-en="Language">言語</span>
           <span class="lesson-detail-val" data-ja="日本語 · ドイツ語 · 英語" data-de="Japanisch · Deutsch · Englisch" data-en="Japanese · German · English">日本語 · ドイツ語 · 英語</span>
@@ -928,28 +949,11 @@ footer {
         <a href="#contact" class="lesson-cta" data-ja="お問い合わせ・ご予約 →" data-de="Anfrage &amp; Buchung →" data-en="Enquire &amp; Book →">お問い合わせ・ご予約 →</a>
       </div>
       <div class="lesson-card">
-        <h3 data-ja="マスタークラス・公開レッスン" data-de="Meisterkurse &amp; öffentliche Kurse" data-en="Masterclasses &amp; Public Lessons">マスタークラス・公開レッスン</h3>
-        <p data-ja="音楽教育機関・音楽祭・コンクール主催者の方へ。演奏とマスタークラスを組み合わせた招聘プログラムについてご相談ください。"
-           data-de="Für Musikschulen, Festivals und Wettbewerbe: Gastdozenturen und kombinierte Konzert-Kurs-Programme auf Anfrage."
-           data-en="For music institutions, festivals, and competition organisers: combined performance and masterclass residencies available.">
-          音楽教育機関・音楽祭・コンクール主催者の方へ。演奏とマスタークラスを組み合わせた招聘プログラムについてご相談ください。
-        </p>
-        <div class="lesson-detail">
-          <span class="lesson-detail-label" data-ja="形式" data-de="Format" data-en="Format">形式</span>
-          <span class="lesson-detail-val" data-ja="対面 · オンライン" data-de="Präsenz · Online" data-en="In-person · Online">対面 · オンライン</span>
-        </div>
-        <div class="lesson-detail">
-          <span class="lesson-detail-label" data-ja="言語" data-de="Sprache" data-en="Language">言語</span>
-          <span class="lesson-detail-val" data-ja="日本語 · ドイツ語 · 英語" data-de="Japanisch · Deutsch · Englisch" data-en="Japanese · German · English">日本語 · ドイツ語 · 英語</span>
-        </div>
-        <a href="#contact" class="lesson-cta" data-ja="招聘のご相談 →" data-de="Anfrage für Gastdozentur →" data-en="Enquire about Residency →">招聘のご相談 →</a>
-      </div>
-      <div class="lesson-card">
         <h3 data-ja="留学相談" data-de="Studienberatung" data-en="Study Abroad Consulting">留学相談</h3>
-        <p data-ja="ドイツ・欧州の音楽大学への留学を考えている方へ。志望校選定・オーディション準備・出願サポートまで、現地で培った知見をもとに丁寧にアドバイスします。"
-           data-de="Beratung für angehende Studierende, die ein Musikstudium in Deutschland oder Europa anstreben. Fundiertes Insiderwissen aus dem deutschen Musikbetrieb – praxisnah und persönlich."
-           data-en="For students considering music studies in Germany or Europe. Guidance grounded in first-hand local knowledge — school selection, audition prep, and application support.">
-          ドイツ・欧州の音楽大学への留学を考えている方へ。志望校選定・オーディション準備・出願サポートまで、現地で培った知見をもとに丁寧にアドバイスします。
+        <p data-ja="ドイツの音楽大学への留学を考えている方へ。志望校選定・オーディション準備・出願サポートまで、現地で培った知見をもとに丁寧にアドバイスします。"
+           data-de="Beratung für angehende Studierende, die ein Musikstudium in Deutschland anstreben. Fundiertes Insiderwissen aus dem deutschen Musikbetrieb – praxisnah und persönlich."
+           data-en="For students considering music studies in Germany. Guidance grounded in first-hand local knowledge — school selection, audition prep, and application support.">
+          ドイツの音楽大学への留学を考えている方へ。志望校選定・オーディション準備・出願サポートまで、現地で培った知見をもとに丁寧にアドバイスします。
         </p>
         <div class="lesson-detail">
           <span class="lesson-detail-label" data-ja="内容" data-de="Inhalt" data-en="Includes">内容</span>
@@ -974,14 +978,14 @@ footer {
   <div class="container">
     <div class="reveal">
       <p class="section-label" data-ja="お問い合わせ" data-de="Kontakt" data-en="Contact">お問い合わせ</p>
-      <h2 class="section-title" data-ja="ご連絡はこちらから" data-de="Schreiben Sie mir" data-en="Get in Touch">ご連絡はこちらから</h2>
+      <h2 class="section-title" data-ja="コンサート・レッスン・取材のご依頼" data-de="Konzertanfragen, Unterrichtsanfragen, Presseanfragen" data-en="Concert, Lesson &amp; Press Enquiries">コンサート・レッスン・取材のご依頼</h2>
     </div>
     <div class="contact-grid reveal">
       <div class="contact-intro">
-        <p data-ja="コンサート招聘・レッスン・取材・その他のご連絡は、こちらのフォームよりお送りください。"
-           data-de="Für Konzertanfragen, Unterrichtsanfragen, Presseanfragen und sonstige Kontaktaufnahmen nutzen Sie bitte das Formular."
-           data-en="For concert bookings, lesson enquiries, press, and all other matters, please use the form below.">
-          コンサート招聘・レッスン・取材・その他のご連絡は、こちらのフォームよりお送りください。
+        <p data-ja="上記およびその他のご連絡は、こちらのフォームよりお送りください。"
+           data-de="Für diese und sonstige Kontaktaufnahmen nutzen Sie bitte das Formular."
+           data-en="For these and all other matters, please use the form below.">
+          上記およびその他のご連絡は、こちらのフォームよりお送りください。
         </p>
         <div class="contact-info">
           <div class="contact-info-item">
@@ -1031,7 +1035,7 @@ footer {
               <option value="" disabled selected></option>
               <option value="concert" data-ja="コンサート・演奏会への招聘"      data-de="Konzertanfrage"     data-en="Concert / Performance">コンサート・演奏会への招聘</option>
               <option value="lesson"  data-ja="レッスン・マスタークラスのご依頼" data-de="Unterrichtsanfrage" data-en="Lesson / Masterclass">レッスン・マスタークラスのご依頼</option>
-              <option value="press"   data-ja="取材・メディア掲載"               data-de="Pressenanfrage"     data-en="Press / Media">取材・メディア掲載</option>
+              <option value="press"   data-ja="取材・メディア掲載"               data-de="Presseanfrage"     data-en="Press / Media">取材・メディア掲載</option>
               <option value="study"   data-ja="ドイツ音楽留学のご相談"           data-de="Studienberatung"    data-en="Studying in Germany">ドイツ音楽留学のご相談</option>
               <option value="other"   data-ja="その他"                           data-de="Sonstiges"          data-en="Other">その他</option>
             </select>
@@ -1053,7 +1057,7 @@ footer {
 
 <!-- Footer -->
 <footer>
-  <div class="footer-name">光山ありさミュラー · Alica Koyama Müller</div>
+  <div class="footer-name">光山ミュラーありさ · Alica Koyama Müller</div>
   <ul class="footer-links">
     <li><a href="https://www.instagram.com/alicakoyamamueller?igsh=MXRlcG90bmprN3VraA%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a></li>
     <li><a href="https://www.tokyo-m-plus.co.jp/products/ag0025" target="_blank" rel="noopener">CD</a></li>
